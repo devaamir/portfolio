@@ -13,7 +13,7 @@ export default function () {
 }
 
 const Main = styled.section`
-	background-image: linear-gradient(to bottom left, #91a6cd, #fff);
+	background-image: linear-gradient(to bottom left, #2766da, #fff);
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -24,7 +24,8 @@ const Main = styled.section`
 
 const Span = styled.span`
 	position: absolute;
-	background: #ff0000;
+	background: #2766da;
+	filter: blur(3px);
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
@@ -35,9 +36,8 @@ const Span = styled.span`
 const Spotlight = styled.div`
 	width: 90%;
 	height: 80%;
-	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
 	box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.1);
-	// filter: blur(4px);
-	backdrop-filter: opacity(0.5);
+	backdrop-filter: blur(10px);
 	border-radius: 30px;
 `;
