@@ -12,9 +12,17 @@ export default function () {
 					<Left>
 						<Name>Sayed Muhammed Aamir</Name>
 						<Profession>Web Developer</Profession>
-						<AboutProf>
+						{/* <AboutProf>
 							Skills: html5, css, javascript, react js, jquery, bootstrap
-						</AboutProf>
+						</AboutProf> */}
+					</Left>
+					<Right>
+						<ImgContainer>
+							<ProfileImg
+								src={require("../assets/profile-img.jpeg").default}
+								alt='profile-img'
+							/>
+						</ImgContainer>
 						<SocialLinks>
 							<Twitter href='https://twitter.com/SayedMuhammedA5'>
 								<IconImg
@@ -41,16 +49,8 @@ export default function () {
 								/>
 							</Facebook>
 						</SocialLinks>
-					</Left>
-					<Right>
-						<ImgContainer>
-							<ProfileImg
-								src={require("../assets/profile-img.jpeg").default}
-								alt='profile-img'
-							/>
-						</ImgContainer>
 					</Right>
-					<SkillsList>
+					{/* <SkillsList>
 						<SkillItems>
 							<SkillImg src='' alt='' />
 						</SkillItems>
@@ -69,7 +69,7 @@ export default function () {
 						<SkillItems>
 							<SkillImg src='' alt='' />
 						</SkillItems>
-					</SkillsList>
+					</SkillsList> */}
 				</Spotlight>
 			</Main>
 		</div>
@@ -77,7 +77,7 @@ export default function () {
 }
 
 const Main = styled.section`
-	background-image: linear-gradient(to bottom left, #2766da, #fff);
+	background-image: linear-gradient(to bottom left, #bacbea, #2766da);
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -89,34 +89,97 @@ const Main = styled.section`
 const Span1 = styled.span`
 	position: absolute;
 	background: #2766da;
-	filter: blur(3px);
+	filter: blur(2px);
 	width: 250px;
 	height: 250px;
 	border-radius: 50%;
 	top: 30px;
 	left: 10px;
+	animation: vibrate-1 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+	@keyframes vibrate-1 {
+		0% {
+			transform: translate(0);
+		}
+		20% {
+			transform: translate(-4px, 4px);
+		}
+		40% {
+			transform: translate(-3px, -7px);
+		}
+		60% {
+			transform: translate(4px, 4px);
+		}
+		80% {
+			transform: translate(9px, -8px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
 `;
 
 const Span2 = styled.span`
 	position: absolute;
 	background: #cbdcf5;
-	filter: blur(3px);
+	filter: blur(2px);
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
 	top: 100px;
 	right: 20px;
+	animation: vibrate-2 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+	@keyframes vibrate-2 {
+		0% {
+			transform: translate(0);
+		}
+		20% {
+			transform: translate(-2px, 6px);
+		}
+		40% {
+			transform: translate(6px, -4px);
+		}
+		60% {
+			transform: translate(-4px, -6px);
+		}
+		80% {
+			transform: translate(-2px, 6px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
 `;
 
 const Span3 = styled.span`
 	position: absolute;
 	background: #2766da;
-	filter: blur(3px);
+	filter: blur(2px);
 	width: 400px;
 	height: 400px;
 	border-radius: 50%;
 	bottom: 30px;
 	right: 100px;
+	animation: vibrate-3 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+	@keyframes vibrate-3 {
+		0% {
+			transform: translate(0);
+		}
+		20% {
+			transform: translate(-4px, 4px);
+		}
+		40% {
+			transform: translate(-3px, -7px);
+		}
+		60% {
+			transform: translate(4px, 4px);
+		}
+		80% {
+			transform: translate(9px, -8px);
+		}
+		100% {
+			transform: translate(0);
+		}
+	}
 `;
 
 const Spotlight = styled.div`
@@ -128,13 +191,13 @@ const Spotlight = styled.div`
 	border-radius: 30px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 50px 80px;
 	box-sizing: border-box;
 `;
 
 const Left = styled.div`
-	width: 45%;
+	width: 40%;
 	color: #314954;
 `;
 
@@ -147,91 +210,14 @@ const Name = styled.h2`
 const Profession = styled.h3`
 	text-transform: uppercase;
 	font-size: 38px;
-	font-weight: 900;
+	margin: 30px 0;
+	font-weight: 500;
 `;
 
-const AboutProf = styled.p``;
-
-const SocialLinks = styled.div`
-	width: 100%;
-	height: 150px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-`;
-
-const Twitter = styled.a`
-	background: #00bedd;
-	width: 22%;
-	height: 100%;
-	cursor: pointer;
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	&:hover,
-	:focus {
-		border-radius: 10px;
-	}
-`;
-
-const LinkedIn = styled.a`
-	background: #0075a5;
-	width: 22%;
-	height: 100%;
-	cursor: pointer;
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	&:hover,
-	:focus {
-		border-radius: 10px;
-	}
-`;
-
-const Github = styled.a`
-	background: #ec456d;
-	width: 22%;
-	height: 100%;
-	cursor: pointer;
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	&:hover,
-	:focus {
-		border-radius: 10px;
-	}
-`;
-
-const Facebook = styled.a`
-	background: #32578b;
-	width: 22%;
-	height: 100%;
-	cursor: pointer;
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	&:hover,
-	:focus {
-		border-radius: 10px;
-	}
-`;
-
-const IconImg = styled.img`
-	width: 50%;
-	height: 50%;
-	fill: #fff;
-`;
+// const AboutProf = styled.p``;
 
 const Right = styled.div`
-	width: 45%;
+	width: 40%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -248,6 +234,7 @@ const ImgContainer = styled.span`
 	box-shadow: 0 0 20px 0 rgba(0, 0, 108, 0.2);
 	overflow: hidden;
 	padding: 10px;
+	margin-right: 30px;
 `;
 
 const ProfileImg = styled.img`
@@ -256,10 +243,108 @@ const ProfileImg = styled.img`
 	border-radius: 50%;
 `;
 
+const SocialLinks = styled.div`
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+`;
+
+const Twitter = styled.a`
+	background: #00bedd;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	&:hover,
+	:focus {
+		border-radius: 10px;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+	}
+`;
+
+const LinkedIn = styled.a`
+	background: #0075a5;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	&:hover,
+	:focus {
+		border-radius: 10px;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+	}
+`;
+
+const Github = styled.a`
+	background: #ec456d;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	&:hover,
+	:focus {
+		border-radius: 10px;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+	}
+`;
+
+const Facebook = styled.a`
+	background: #32578b;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	&:hover,
+	:focus {
+		border-radius: 10px;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+	}
+`;
+
+const IconImg = styled.img`
+	width: 30%;
+	height: 30%;
+	fill: #fff;
+`;
+
 const SkillsList = styled.div`
 	display: block;
 	width: 700px;
-	height: 700px;
+	height: 600px;
 	position: absolute;
 	top: 0;
 	right: 75px;
@@ -268,12 +353,15 @@ const SkillsList = styled.div`
 `;
 
 const SkillItems = styled.span`
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	background: #574768;
-	// display: flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 
-const SkillImg = styled.img``;
+const SkillImg = styled.img`
+	width: 100%;
+	height: 100%;
+`;
