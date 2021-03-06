@@ -5,16 +5,37 @@ export default function () {
 	return (
 		<div>
 			<Main>
-				<Span1></Span1>
+				<Span1>
+					{/* <img src={require("../assets/instagram.svg").default} alt='' /> */}
+				</Span1>
 				<Span2></Span2>
 				<Span3></Span3>
 				<Spotlight>
 					<Left>
-						<Name>Sayed Muhammed Aamir</Name>
+						<Name>
+							<FirstName>Sayed Muhammed </FirstName>Aamir
+						</Name>
 						<Profession>Web Developer</Profession>
-						{/* <AboutProf>
-							Skills: html5, css, javascript, react js, jquery, bootstrap
-						</AboutProf> */}
+						{/* <SkillsList>
+							<SkillItems>
+								<SkillImg src='' alt='' />
+							</SkillItems>
+							<SkillItems>
+								<SkillImg src='' alt='' />
+							</SkillItems>
+							<SkillItems>
+								<SkillImg src='' alt='' />
+							</SkillItems>
+							<SkillItems>
+								<SkillImg src='' alt='' />
+							</SkillItems>
+							<SkillItems>
+								<SkillImg src='' alt='' />
+							</SkillItems>
+							<SkillItems>
+								<SkillImg src='' alt='' />
+							</SkillItems>
+						</SkillsList> */}
 					</Left>
 					<Right>
 						<ImgContainer>
@@ -50,26 +71,6 @@ export default function () {
 							</Facebook>
 						</SocialLinks>
 					</Right>
-					{/* <SkillsList>
-						<SkillItems>
-							<SkillImg src='' alt='' />
-						</SkillItems>
-						<SkillItems>
-							<SkillImg src='' alt='' />
-						</SkillItems>
-						<SkillItems>
-							<SkillImg src='' alt='' />
-						</SkillItems>
-						<SkillItems>
-							<SkillImg src='' alt='' />
-						</SkillItems>
-						<SkillItems>
-							<SkillImg src='' alt='' />
-						</SkillItems>
-						<SkillItems>
-							<SkillImg src='' alt='' />
-						</SkillItems>
-					</SkillsList> */}
 				</Spotlight>
 			</Main>
 		</div>
@@ -207,6 +208,11 @@ const Name = styled.h2`
 	font-weight: 900;
 `;
 
+const FirstName = styled.h2`
+	font-size: 40px;
+	font-weight: 400;
+`;
+
 const Profession = styled.h3`
 	text-transform: uppercase;
 	font-size: 38px;
@@ -342,14 +348,10 @@ const IconImg = styled.img`
 `;
 
 const SkillsList = styled.div`
-	display: block;
-	width: 700px;
-	height: 600px;
-	position: absolute;
-	top: 0;
-	right: 75px;
-	bottom: 0;
-	margin: auto 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const SkillItems = styled.span`
