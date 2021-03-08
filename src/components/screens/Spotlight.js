@@ -131,6 +131,12 @@ const Span1 = styled.span`
 			transform: translate(0);
 		}
 	}
+	@media all and (max-width: 768px) {
+		width: 150px;
+		height: 150px;
+		top: 100px;
+		animation: vibrate-2 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+	}
 `;
 
 const Span2 = styled.span`
@@ -163,6 +169,12 @@ const Span2 = styled.span`
 			transform: translate(0);
 		}
 	}
+	@media all and (max-width: 768px) {
+		width: 100px;
+		height: 100px;
+		top: 100px;
+		animation: vibrate-2 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+	}
 `;
 
 const Span3 = styled.span`
@@ -194,6 +206,13 @@ const Span3 = styled.span`
 		100% {
 			transform: translate(0);
 		}
+	}
+	@media all and (max-width: 768px) {
+		width: 300px;
+		height: 300px;
+		bottom: 100px;
+		right: 30px;
+		animation: vibrate-2 8s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
 	}
 `;
 
