@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export default function () {
+	const [skills] = useState([
+		{
+			id: 1,
+			img: require("../assets/html5.svg"),
+		},
+		{
+			id: 2,
+			img: require("../assets/css3.svg"),
+		},
+		{
+			id: 3,
+			img: require("../assets/js.svg"),
+		},
+		{
+			id: 4,
+			img: require("../assets/react.svg"),
+		},
+		{
+			id: 5,
+			img: require("../assets/bootstrap.svg"),
+		},
+	]);
+
+	// onHover(e) => {
+	// 	console.log("hi")
+	// }
+
 	return (
 		<div>
 			<Main>
@@ -16,26 +43,13 @@ export default function () {
 							<FirstName>Sayed Muhammed </FirstName>Aamir
 						</Name>
 						<Profession>Web Developer</Profession>
-						{/* <SkillsList>
-							<SkillItems>
-								<SkillImg src='' alt='' />
-							</SkillItems>
-							<SkillItems>
-								<SkillImg src='' alt='' />
-							</SkillItems>
-							<SkillItems>
-								<SkillImg src='' alt='' />
-							</SkillItems>
-							<SkillItems>
-								<SkillImg src='' alt='' />
-							</SkillItems>
-							<SkillItems>
-								<SkillImg src='' alt='' />
-							</SkillItems>
-							<SkillItems>
-								<SkillImg src='' alt='' />
-							</SkillItems>
-						</SkillsList> */}
+						<SkillsList>
+							{skills.map((skill) => (
+								<SkillItems key={skill.id}>
+									<SkillImg src={skill.img.default} alt='skills' />
+								</SkillItems>
+							))}
+						</SkillsList>
 					</Left>
 					<Right>
 						<ImgContainer>
@@ -350,20 +364,31 @@ const IconImg = styled.img`
 const SkillsList = styled.div`
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
+	margin: 100px 0 0;
 `;
 
 const SkillItems = styled.span`
-	width: 100px;
-	height: 100px;
-	background: #574768;
+	width: 50px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-right: 30px;
+	// background: #fff;
 `;
 
 const SkillImg = styled.img`
 	width: 100%;
 	height: 100%;
 `;
+
+// const HI = styled.div`
+// 	width: 100%;
+// 	display: block;
+// 	height: 150px;
+// 	background: #fff;
+// 	margin-bottom: 50px;
+// 	border-radius: 0 10px 10px 10px;
+// `;
