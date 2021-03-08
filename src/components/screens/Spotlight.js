@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HelmetExport from "react-helmet";
 import styled from "styled-components";
 
 export default function () {
@@ -31,6 +32,9 @@ export default function () {
 
 	return (
 		<div>
+			<HelmetExport>
+				<title>Sayed Muhammed Aamir | Web Developer</title>
+			</HelmetExport>
 			<Main>
 				<Span1>
 					{/* <img src={require("../assets/instagram.svg").default} alt='' /> */}
