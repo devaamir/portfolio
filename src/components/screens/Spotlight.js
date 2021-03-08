@@ -209,22 +209,40 @@ const Spotlight = styled.div`
 	justify-content: space-around;
 	padding: 50px 80px;
 	box-sizing: border-box;
+	@media all and (max-width: 1200px) {
+		padding: 30px 50px;
+	}
 `;
 
 const Left = styled.div`
 	width: 40%;
 	color: #314954;
+	@media all and (max-width: 1200px) {
+		width: 45%;
+	}
 `;
 
 const Name = styled.h2`
 	text-transform: uppercase;
 	font-size: 80px;
 	font-weight: 900;
+	@media all and (max-width: 1200px) {
+		font-size: 70px;
+	}
+	@media all and (max-width: 980px) {
+		font-size: 50px;
+	}
 `;
 
 const FirstName = styled.h2`
 	font-size: 40px;
 	font-weight: 400;
+	@media all and (max-width: 1200px) {
+		font-size: 30px;
+	}
+	@media all and (max-width: 980px) {
+		font-size: 20px;
+	}
 `;
 
 const Profession = styled.h3`
@@ -232,6 +250,13 @@ const Profession = styled.h3`
 	font-size: 38px;
 	margin: 30px 0;
 	font-weight: 500;
+	@media all and (max-width: 1200px) {
+		font-size: 30px;
+	}
+	@media all and (max-width: 1200px) {
+		font-size: 20px;
+		margin: 20px 0;
+	}
 `;
 
 // const AboutProf = styled.p``;
@@ -242,6 +267,9 @@ const Right = styled.div`
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	@media all and (max-width: 1200px) {
+		width: 45%;
+	}
 `;
 
 const ImgContainer = styled.span`
@@ -255,6 +283,18 @@ const ImgContainer = styled.span`
 	overflow: hidden;
 	padding: 10px;
 	margin-right: 30px;
+	@media all and (max-width: 1520px) {
+		width: 300px;
+		height: 300px;
+	}
+	@media all and (max-width: 1200px) {
+		width: 280px;
+		height: 280px;
+	}
+	@media all and (max-width: 980px) {
+		width: 200px;
+		height: 200px;
+	}
 `;
 
 const ProfileImg = styled.img`
@@ -290,6 +330,10 @@ const Twitter = styled.a`
 			height: 50%;
 		}
 	}
+	@media all and (max-width: 980px) {
+		width: 50px;
+		height: 50px;
+	}
 `;
 
 const LinkedIn = styled.a`
@@ -310,6 +354,10 @@ const LinkedIn = styled.a`
 			width: 50%;
 			height: 50%;
 		}
+	}
+	@media all and (max-width: 980px) {
+		width: 50px;
+		height: 50px;
 	}
 `;
 
@@ -332,6 +380,10 @@ const Github = styled.a`
 			height: 50%;
 		}
 	}
+	@media all and (max-width: 980px) {
+		width: 50px;
+		height: 50px;
+	}
 `;
 
 const Facebook = styled.a`
@@ -353,6 +405,10 @@ const Facebook = styled.a`
 			height: 50%;
 		}
 	}
+	@media all and (max-width: 980px) {
+		width: 50px;
+		height: 50px;
+	}
 `;
 
 const IconImg = styled.img`
@@ -366,7 +422,13 @@ const SkillsList = styled.div`
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	margin: 100px 0 0;
+	margin-top: 100px;
+	@media all and (max-width: 1200px) {
+		margin-top: 70px;
+	}
+	@media all and (max-width: 980px) {
+		margin-top: 30px;
+	}
 `;
 
 const SkillItems = styled.span`
@@ -376,7 +438,9 @@ const SkillItems = styled.span`
 	justify-content: center;
 	align-items: center;
 	margin-right: 30px;
-	// background: #fff;
+	@media all and (max-width: 980px) {
+		margin-right: 20px;
+	}
 `;
 
 const SkillImg = styled.img`
