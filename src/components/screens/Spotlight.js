@@ -40,7 +40,7 @@ export default function () {
 				<Spotlight>
 					<Left>
 						<Name>
-							<FirstName>Sayed Muhammed </FirstName>Aamir
+							<FirstName>Sayed Muhammed</FirstName>Aamir
 						</Name>
 						<Profession>Web Developer</Profession>
 						<SkillsList>
@@ -206,11 +206,16 @@ const Spotlight = styled.div`
 	border-radius: 30px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 50px 80px;
 	box-sizing: border-box;
 	@media all and (max-width: 1200px) {
 		padding: 30px 50px;
+	}
+	@media all and (max-width: 768px) {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 `;
 
@@ -219,6 +224,9 @@ const Left = styled.div`
 	color: #314954;
 	@media all and (max-width: 1200px) {
 		width: 45%;
+	}
+	@media all and (max-width: 768px) {
+		width: 70%;
 	}
 `;
 
@@ -232,6 +240,10 @@ const Name = styled.h2`
 	@media all and (max-width: 980px) {
 		font-size: 50px;
 	}
+	@media all and (max-width: 768px) {
+		width: 100%;
+		text-align: center;
+	}
 `;
 
 const FirstName = styled.h2`
@@ -242,6 +254,10 @@ const FirstName = styled.h2`
 	}
 	@media all and (max-width: 980px) {
 		font-size: 20px;
+	}
+	@media all and (max-width: 480px) {
+		font-size: 16px;
+		text-align: center;
 	}
 `;
 
@@ -257,6 +273,13 @@ const Profession = styled.h3`
 		font-size: 20px;
 		margin: 20px 0;
 	}
+	@media all and (max-width: 1200px) {
+		width: 100%;
+		text-align: center;
+	}
+	@media all and (max-width: 480px) {
+		font-size: 16px;
+	}
 `;
 
 // const AboutProf = styled.p``;
@@ -269,6 +292,10 @@ const Right = styled.div`
 	position: relative;
 	@media all and (max-width: 1200px) {
 		width: 45%;
+	}
+	@media all and (max-width: 768px) {
+		width: 70%;
+		flex-direction: column;
 	}
 `;
 
@@ -295,6 +322,13 @@ const ImgContainer = styled.span`
 		width: 200px;
 		height: 200px;
 	}
+	@media all and (max-width: 768px) {
+		margin-right: 0px;
+		margin: 30px 0;
+	}
+	@media all and (max-width: 480px) {
+		margin: 20px 0;
+	}
 `;
 
 const ProfileImg = styled.img`
@@ -309,6 +343,11 @@ const SocialLinks = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	@media all and (max-width: 768px) {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+	}
 `;
 
 const Twitter = styled.a`
@@ -333,6 +372,10 @@ const Twitter = styled.a`
 	@media all and (max-width: 980px) {
 		width: 50px;
 		height: 50px;
+	}
+	@media all and (max-width: 480px) {
+		width: 30px;
+		height: 30px;
 	}
 `;
 
@@ -359,6 +402,10 @@ const LinkedIn = styled.a`
 		width: 50px;
 		height: 50px;
 	}
+	@media all and (max-width: 480px) {
+		width: 30px;
+		height: 30px;
+	}
 `;
 
 const Github = styled.a`
@@ -383,6 +430,10 @@ const Github = styled.a`
 	@media all and (max-width: 980px) {
 		width: 50px;
 		height: 50px;
+	}
+	@media all and (max-width: 480px) {
+		width: 30px;
+		height: 30px;
 	}
 `;
 
@@ -409,6 +460,10 @@ const Facebook = styled.a`
 		width: 50px;
 		height: 50px;
 	}
+	@media all and (max-width: 480px) {
+		width: 30px;
+		height: 30px;
+	}
 `;
 
 const IconImg = styled.img`
@@ -429,6 +484,9 @@ const SkillsList = styled.div`
 	@media all and (max-width: 980px) {
 		margin-top: 30px;
 	}
+	@media all and (max-width: 480px) {
+		margin-top: 10px;
+	}
 `;
 
 const SkillItems = styled.span`
@@ -440,6 +498,9 @@ const SkillItems = styled.span`
 	margin-right: 30px;
 	@media all and (max-width: 980px) {
 		margin-right: 20px;
+	}
+	@media all and (max-width: 480px) {
+		margin-right: 10px;
 	}
 `;
 
