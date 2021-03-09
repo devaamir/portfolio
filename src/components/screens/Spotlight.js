@@ -519,6 +519,15 @@ const SkillItems = styled.span`
 	justify-content: center;
 	align-items: center;
 	margin-right: 30px;
+	&:hover,
+	:focus {
+		background: #fff;
+		border-radius: 10px;
+		padding: 10px;
+		img {
+			filter: none;
+		}
+	}
 	@media all and (max-width: 980px) {
 		margin-right: 20px;
 	}
@@ -530,13 +539,10 @@ const SkillItems = styled.span`
 const SkillImg = styled.img`
 	width: 100%;
 	height: 100%;
+	filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%)
+		contrast(0%);
+	&:hover,
+	:focus {
+		filter: none;
+	}
 `;
-
-// const HI = styled.div`
-// 	width: 100%;
-// 	display: block;
-// 	height: 150px;
-// 	background: #fff;
-// 	margin-bottom: 50px;
-// 	border-radius: 0 10px 10px 10px;
-// `;
