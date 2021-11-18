@@ -46,7 +46,7 @@ export default function () {
 						<Name>
 							<FirstName>Sayed Muhammed</FirstName>Aamir
 						</Name>
-						<Profession>Web Developer</Profession>
+						<Profession>UI Engineer</Profession>
 						<SkillsList>
 							{skills.map((skill) => (
 								<SkillItems key={skill.id}>
